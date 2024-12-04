@@ -967,13 +967,13 @@ public class InputDataE_KTP {
                     "kecamatan = ?, " +
                     "agama = ?, " +
                     "status_perkawinan = ?, " +
-                    "pekerjaan = ?, " + // Tambahkan koma di sini
-                    "kewarganegaraan = ?, " + // Tambahkan koma di sini
+                    "pekerjaan = ?, " +
+                    "kewarganegaraan = ?, " +
                     "berlaku_hingga = ?, " +
                     "tanggal_dikeluarkan = ?, " +
                     "tempat_dikeluarkan = ?, " +
                     "path_foto = ?, " +
-                    "path_tanda_tangan = ? " + // Pastikan koma terakhir dihilangkan
+                    "path_tanda_tangan = ? " +
                     "WHERE nik = ?";
 
         } else if (delete) {
@@ -1019,7 +1019,7 @@ public class InputDataE_KTP {
             pstmt.executeUpdate();
             if (update) {
                 JOptionPane.showMessageDialog(frameInput, "Data berhasil diupdate!");
-                showMainMenu();
+                showKTP(nikSearch.getText());
             } else if (delete) {
                 JOptionPane.showMessageDialog(frameInput, "Data berhasil dihapus!");
                 showMainMenu();
